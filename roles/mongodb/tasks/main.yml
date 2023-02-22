@@ -13,3 +13,9 @@
     path: /etc/yum.repos.d/mongodb.repo
     regexp: '127.0.0.1'
     replace: '0.0.0.0'
+
+- name: Starting Mongodb
+  ansible.builtin.service:
+    name: mongodb
+    state: restarted
+    enabled: yes

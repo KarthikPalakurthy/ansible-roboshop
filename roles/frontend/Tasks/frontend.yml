@@ -1,8 +1,4 @@
 
-#print_head "Installing Nginx"
-#yum install nginx -y &>>${log}
-#status_check
-
 #print_head "Removing default files"
 #rm -rf /usr/share/nginx/html/* &>>${log}
 #status_check
@@ -38,3 +34,8 @@
   ansible.builtin.yum:
     name: nginx
     status: installed
+
+- name: Removing old files
+  ansible.builtin.file:
+    path: /usr/share/nginx/html
+    state: absent

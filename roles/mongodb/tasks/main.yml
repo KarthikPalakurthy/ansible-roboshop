@@ -1,2 +1,4 @@
 - name: Installing MongoDB
-  ansible.builtin.shell: yum install mongodb-org -y
+  ansible.builtin.yum:
+    name: mongodb-org
+    state: installed

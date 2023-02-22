@@ -1,8 +1,4 @@
 
-#print_head "Removing default files"
-#rm -rf /usr/share/nginx/html/* &>>${log}
-#status_check
-
 #print_head "Downloading frontend content"
 #curl -o /tmp/frontend.zip https://roboshop-artifacts.s3.amazonaws.com/frontend.zip &>>${log}
 #status_check
@@ -39,3 +35,9 @@
   ansible.builtin.file:
     path: /usr/share/nginx/html
     state: absent
+
+- name: Downloading and extracting the frontend content
+  ansible.builtin.unarchive:
+    src: /tmp/frontend.zip https://roboshop-artifacts.s3.amazonaws.com/frontend.zip
+    dest: /usr/share/nginx/html
+    remote_src: yes

@@ -13,7 +13,6 @@
     path: /usr/share/nginx/html
     state: directory
 
-
 - name: Downloading and extracting the frontend content
   ansible.builtin.unarchive:
     src: https://roboshop-artifacts.s3.amazonaws.com/frontend.zip
@@ -21,7 +20,7 @@
     remote_src: yes
 
 - name: Copying Roboshop config file to location
-  ansible.builtin.copy:
+  ansible.builtin.template:
     src: roboshop.conf
     dest: /etc/nginx/default.d/roboshop.conf
 

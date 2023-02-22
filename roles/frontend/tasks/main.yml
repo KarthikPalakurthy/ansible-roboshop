@@ -19,3 +19,15 @@
     src: https://roboshop-artifacts.s3.amazonaws.com/frontend.zip
     dest: /usr/share/nginx/html
     remote_src: yes
+
+- name: Copying Roboshop config file to location
+  ansible.builtin.copy:
+    src: roboshop.conf
+    dest: /etc/nginx/default.d/roboshop.conf
+
+- name: Starting Nginx
+  ansible.builtin.service:
+      name: nginx
+      state: restart
+      enabled: yes
+

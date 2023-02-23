@@ -21,7 +21,7 @@
 
 - name: Copying Roboshop config file to location
   ansible.builtin.copy:
-    src: roboshop.conf
+    src: mongo.repo
     dest: /etc/nginx/default.d/
 
 - name: Starting Nginx

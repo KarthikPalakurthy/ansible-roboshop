@@ -36,14 +36,6 @@
     src: catalogue.service
     dest: /etc/systemd/system
 
-- name: Starting Catalogue service
-  ansible.builtin.systemd:
-    name: catalogue
-    daemon_reload: yes
-    enabled: yes
-    state: restarted
-
-
 - name: Copy MongoDB Yum Repo file
   ansible.builtin.copy:
     src: mongodb.repo

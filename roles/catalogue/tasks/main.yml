@@ -60,3 +60,9 @@
     file: "/app/schema/catalogue.js"
     idempotent: yes
 
+  name: Starting Catalogue service
+  ansible.builtin.systemd:
+    name: catalogue
+    daemon_reload: yes
+    enabled: yes
+    state: restarted

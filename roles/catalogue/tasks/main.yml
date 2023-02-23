@@ -52,7 +52,7 @@
     file: "/app/schema/catalogue.js"
     idempotent: yes
 
-  name: Starting Catalogue service
+- name: Starting Catalogue service
   ansible.builtin.systemd:
     name: catalogue
     daemon_reload: yes

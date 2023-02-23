@@ -23,7 +23,7 @@
 - name: Downloading application content to directory
   ansible.builtin.unarchive:
     src: https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip
-    dest: /tmp/
+    dest: /app
     remote_src: yes
 
 - name: Updating NodeJS

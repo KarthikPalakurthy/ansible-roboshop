@@ -23,5 +23,5 @@
 - name: Downloading application content to directory
   ansible.builtin.unarchive:
     src: https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip
-    dest: /tmp/catalogue.zip
+    dest: /tmp/
     remote_src: yes

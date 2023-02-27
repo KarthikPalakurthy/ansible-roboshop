@@ -14,8 +14,8 @@
     path: /app
     state: latest
 
-- name: Install Schema
-  ansible.builtin.include_tasks: "mongo-schema.yml"
-
 - name: Start {{component}}
   ansible.builtin.include_tasks: "systemd.yml"
+
+- name: Install Schema
+  ansible.builtin.include_tasks: "mongo-schema.yml"

@@ -28,7 +28,7 @@
 
 - name: Installing NPM
   npm:
-    name: catalogue.js
+    name: catalogue
     path: /app
 
 - name: Copying systemD file

@@ -8,8 +8,5 @@
     name: mongodb-org-shell
     state: installed
 
-- name: Loading Schema
-  community.mongodb.mongodb_shell:
-    login_host: mongodb-dev.devpractice.online
-    file: "/app/schema/{{component}}.js"
-    idempotent: yes
+- name: Load Schema
+  ansible.builtin.shell: mongo --host mongodb-dev.devpractice.online </app/schema/catalogue.js

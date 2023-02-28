@@ -20,9 +20,9 @@
     path: /app
     state: directory
 
-- name: Downloading {{component}} Application content
+- name: Downloading Application content
   ansible.builtin.unarchive:
-    src: https://roboshop-artifacts.s3.amazonaws.com/{{component}}.zip
+    src: https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip
     dest: /app
     remote_src: yes
 
@@ -33,12 +33,12 @@
 
 - name: Copying systemD file
   ansible.builtin.copy:
-    src: "{{component}}.service"
-    dest: /etc/systemd/system/{{component}}.service
+    src: "catalogue.service"
+    dest: /etc/systemd/system/catalogue.service
 
-- name: Starting {{component}} service
+- name: Starting catalogue service
   ansible.builtin.systemd:
-    name: "{{component}}"
+    name: "catalogue"
     daemon_reload: yes
     enabled: yes
     state: restarted
@@ -56,5 +56,5 @@
 - name: Load Schema
   community.mongodb.mongodb_shell:
     login_host: mongodb-dev.devpractice.online
-    file: "/app/schema/{{component}}.js"
+    file: "/app/schema/catalogue.js"
     idempotent: yes

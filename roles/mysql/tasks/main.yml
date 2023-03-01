@@ -8,8 +8,8 @@
 
 - name: Install SQL server
   ansible.builtin.yum:
-    name: mysql-community-server
-    state: present
+    name: mysql
+    state: installed
 
 - name: Start mysql service
   ansible.builtin.systemd:

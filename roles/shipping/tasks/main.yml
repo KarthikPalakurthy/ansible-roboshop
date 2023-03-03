@@ -1,18 +1,16 @@
-- name: Downloading NodeJS
-  ansible.builtin.shell: curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 
-- name: Installing NodeJS
+- name: Install Maven
   ansible.builtin.yum:
-    name: nodejs
+    name: maven
     state: installed
 
 - name: App Pre-requisites
   ansible.builtin.include_tasks: app-prereq.yml
 
-- name: Installing NPM
-  npm:
-    name: catalogue
-    path: /app
+- name: Build MVN package
+  ansible.builtin.shell: mvn clean package
+  args:
+    chdir: /app
 
 - name: SystemD
   ansible.builtin.include_tasks: systemd.yml
@@ -20,5 +18,3 @@
 - name: Importing Schema
   ansible.builtin.include_tasks: "{{schema_type}}-schema.yml"
   when: schema_load
-
-

@@ -1,0 +1,15 @@
+- name: Install MYSQL client
+  ansible.builtin.yum:
+    name:
+       - mysql
+       - python3-PyMySQL
+    state: installed
+
+- name: Load MySQL
+  community.mysql.mysql_db:
+    state: import
+    name: mysql
+    target: /app/schema/{{component}}.sql
+    login_host: mysql-dev.devpractice.online
+    login_user: root
+    login_password: "{{ root_mysql_password }}"

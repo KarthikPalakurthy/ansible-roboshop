@@ -37,5 +37,5 @@
         value: "{{ item.value }}"
         region: us-east-1
         string_type: "SecureString"
-        loop:
+      loop:
           - {name: "dev.payment.AMQP_PASS" , value: "roboshop123" }

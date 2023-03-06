@@ -2,8 +2,8 @@
   hosts: localhost
   connection: local
   tasks:
-    - name: Create a value pair in AWS Parameter store
-      community.aws.aws_ssm_parameter_store:
+     - name: Create a value pair in AWS Parameter store
+       community.aws.aws_ssm_parameter_store:
         name: "{{ item.name }}"
         value: "{{ item.value }}"
         region: us-east-1
@@ -32,8 +32,8 @@
 
 ### Passwords should not be in the files however, we are creating for lab purposes
 
-    - name: Create a value pair in AWS Parameter store
-      community.aws.aws_ssm_parameter_store:
+     - name: Create a value pair in AWS Parameter store
+       community.aws.aws_ssm_parameter_store:
         name: "{{ item.name }}"
         value: "{{ item.value }}"
         region: us-east-1

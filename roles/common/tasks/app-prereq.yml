@@ -14,11 +14,11 @@
 
 - name: Downloading {{component}} Application content
   ansible.builtin.unarchive:
-    src: http://{{nexus.user}}:{{nexus.password}}@172.31.11.118:8081/#browse/browse:{{component}}:{{component}}-{{version}}.zip
+    src: http://{{nexus_user}}:{{nexus_password}}@172.31.11.118:8081/#browse/browse:{{component}}:{{component}}-{{version}}.zip
     dest: /app
     remote_src: yes
   vars:
-    nexus.user: {{ lookup('aws_ssm', "nexus.user", region='us-east-1') }}
-    nexus.password: {{ lookup('aws_ssm', "nexus.password", region='us-east-1') }}
+    nexus_user: {{ lookup('aws_ssm', "nexus.user", region='us-east-1') }}
+    nexus_password: {{ lookup('aws_ssm', "nexus.password", region='us-east-1') }}
 
 

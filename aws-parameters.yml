@@ -43,6 +43,8 @@
           - { name: "dev.mysql.DB_ADMIN_PASS", value: "Roboshop@1" }
           - { name: "dev.docdb.DB_ADMIN_USER", value: "admin123" }
           - { name: "dev.docdb.DB_ADMIN_PASS", value: "Roboshop123" }
+          - { name: "dev.rds.DB_ADMIN_USER", value: "admin123" }
+          - { name: "dev.rds.DB_ADMIN_PASS", value: "Roboshop123" }
 
 
 

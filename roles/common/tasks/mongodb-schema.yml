@@ -11,5 +11,6 @@
 - name: Load Schema
   community.mongodb.mongodb_shell:
     login_host: mongodb-dev.devpractice.online
-    file: "/app/schema/{{component}}.js"
+##    file: "/app/schema/{{component}}.js"
+    file: "/app/{{component.js]]"
     idempotent: yes

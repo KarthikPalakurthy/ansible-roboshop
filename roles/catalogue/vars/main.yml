@@ -1,4 +1,4 @@
 component: catalogue
 schema_load: true
 schema_type: mongodb
-version: 1.0.2
+version: 1.0.3

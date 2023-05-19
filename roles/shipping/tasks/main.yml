@@ -1,20 +1,4 @@
-
-- name: Install Maven
-  ansible.builtin.yum:
-    name: maven
-    state: installed
-
-- name: App Pre-requisites
-  ansible.builtin.include_tasks: app-prereq.yml
-
-- name: Build MVN package
-  ansible.builtin.shell: mvn clean package
-  args:
-    chdir: /app
-
-- name: SystemD
-  ansible.builtin.include_tasks: systemd.yml
-
-- name: Importing Schema
-  ansible.builtin.include_tasks: "{{schema_type}}-schema.yml"
-  when: schema_load
+- name: Import Java
+  ansible.builtin.import_role:
+    name: common
+    tasks_from: java

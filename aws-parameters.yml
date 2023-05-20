@@ -29,7 +29,6 @@
         - {name: "dev.user.MONGO", value: "true" }
         - {name: "dev.user.MONGO_URL", value: "mongodb://mongodb-dev.devpractice.online:27017/users" }
         - {name: "dev.user.REDIS_HOST", value: "redis-dev.devpractice.online" }
-        - {name: "roboshop_rabbitmq_password", value: "Roboshop123" }
 ### Passwords should not be in the files however, we are creating for lab purposes
 
     - name: Create a value pair in AWS Parameter store

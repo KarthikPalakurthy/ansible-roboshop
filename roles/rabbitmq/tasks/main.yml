@@ -7,6 +7,7 @@
 - name: Install Erlang and RabbitMQ
   ansible.builtin.yum:
     name:
+#      - erlang   #### Ignoring erlang installation due to error
       - rabbitmq-server
     state: installed
 
@@ -20,7 +21,7 @@
 - name: Adding application user
   community.rabbitmq.rabbitmq_user:
     user: roboshop
-    password: "{{roboshop_rabbitmq_password}}"
+    password: "{{ lookup('aws_ssm', '{{env}}.rabbitmq.PASS', region='us-east-1')}}"
     vhost: /
     configure_priv: .*
     read_priv: .*

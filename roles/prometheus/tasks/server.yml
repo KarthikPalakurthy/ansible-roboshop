@@ -5,7 +5,7 @@
   vars:
     labels:
     - {tag : "env", target: "environment"}
-    - { tag: "Name", target: {{ component }} }
+    - {tag: "Name", target: "name"}
 
 
 - name: Restarting Prometheus

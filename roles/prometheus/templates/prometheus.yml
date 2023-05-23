@@ -29,7 +29,7 @@ scrape_configs:
       - region: us-east-1
         port: 9100
     relabel_configs:
-{ % for item in navigation % }
-     - source_labels: [_meta_ec2_tag_{{ item.tag }}]
-       target.label: {{ item.target }}
+{ % for item in labels % }
+      - source_labels: [_meta_ec2_tag_{{ item.tag }}]
+        target_label: {{ item.target }}
 {% endfor %}

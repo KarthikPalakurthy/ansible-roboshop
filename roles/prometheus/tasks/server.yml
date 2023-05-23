@@ -3,7 +3,10 @@
     src: prometheus.yml
     dest: /opt/prometheus/prometheus.yml
   vars:
-    labels: {tag : "env", target: "environment"}
+    labels:
+    - {tag : "env", target: "environment"}
+    - { tag: "Name", target: {{ component }} }
+
 
 - name: Restarting Prometheus
   ansible.builtin.systemd:

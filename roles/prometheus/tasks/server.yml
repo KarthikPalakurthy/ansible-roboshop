@@ -4,8 +4,8 @@
     dest: /opt/prometheus/prometheus.yml
   vars:
     labels:
-    - {tag : "env", target: "environment"}
-    - {tag: "Name", target: "name"}
+    - {tag : "env", label: "environment"}
+    - {tag: "Name", label: "name"}
 
 
 - name: Restarting Prometheus

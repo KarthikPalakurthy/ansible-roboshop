@@ -30,6 +30,6 @@ scrape_configs:
         port: 9100
     relabel_configs:
 { % for item in navigation % }
-     - source_labels: [_meta_ec2_tag_{{item.tag}}]
-       target.label: {{item.target}}
+     - source_labels: [_meta_ec2_tag_{{ item.tag }}]
+       target.label: {{ item.target }}
 {% endfor %}

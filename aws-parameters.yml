@@ -49,5 +49,3 @@
           - { name: "dev.rabbitmq.AMQP_PASS", value: "roboshop123" }
           - { name: "grafana_api_key", value: "eyJrIjoiWVNuSmhGaTB3MWxwbEFxYjM0djNyTWJLSUhuZmcyUXoiLCJuIjoidGVtcCIsImlkIjoxfQ==" }
 
-
-

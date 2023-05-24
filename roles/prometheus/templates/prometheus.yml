@@ -27,12 +27,12 @@ scrape_configs:
     static_configs:
       - targets: ["172.31.8.241:9100"]
 
-#  - job_name: 'ec2 nodes'
-#    ec2_sd_configs:
-#      - region: us-east-1
-#        port: 9100
-#    relabel_configs:
-#    {% for item in labels %}
-#      - source_labels: [_meta_ec2_tag_{{ item.tag }}]
-#        target_label: {{ item.label }}
-#    {% endfor %}
+  - job_name: 'ec2 nodes'
+    ec2_sd_configs:
+      - region: us-east-1
+        port: 9100
+    relabel_configs:
+{% for item in labels %}
+      - source_labels: [_meta_ec2_tag_{{ item.tag }}]
+        target_label: {{ item.label }}
+{% endfor %}

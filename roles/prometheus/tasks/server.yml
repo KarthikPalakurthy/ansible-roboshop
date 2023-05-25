@@ -8,6 +8,11 @@
     - {tag: "Name", label: "name"}
 
 
+- name: Adding record rules file
+  ansible.builtin.template:
+    src: record-rules.yml
+    dest: /opt/prometheus/record-rules.yml
+
 - name: Restarting Prometheus
   ansible.builtin.systemd:
     name: prometheus.service

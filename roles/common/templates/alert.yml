@@ -9,5 +9,5 @@ groups:
         annotations:
   {% raw %}
   summary: "Service Down - [{{ $labels.name }}]"
-  description: " Service {{$label.exported_name}} is down"
+  description: " Service {{$labels.exported_name}} is down"
   {% endraw %}

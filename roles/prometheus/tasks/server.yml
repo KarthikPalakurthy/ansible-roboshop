@@ -13,6 +13,11 @@
     src: record-rules.yml
     dest: /opt/prometheus/record-rules.yml
 
+- name: Adding Alert rules file
+  ansible.builtin.template:
+    src: alert-rules.yml
+    dest: /opt/prometheus/alert-rules.yml
+
 - name: Restarting Prometheus
   ansible.builtin.systemd:
     name: prometheus.service

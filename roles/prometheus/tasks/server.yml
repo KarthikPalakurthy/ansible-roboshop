@@ -17,6 +17,7 @@
   ansible.builtin.template:
     src: alert-rules.yml
     dest: /opt/prometheus/alert-rules.yml
+    remote_src: yes
 
 - name: Restarting Prometheus
   ansible.builtin.systemd:

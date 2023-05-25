@@ -1,5 +1,5 @@
 groups:
-  - name: Alerts
+  - name: Instance Down!!!
     rules:
       - alert: InstanceDown
         expr: up == 0

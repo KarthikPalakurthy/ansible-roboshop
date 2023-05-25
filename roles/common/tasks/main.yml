@@ -10,6 +10,11 @@
     dest: /tmp/grafana.json
     remote_src: yes
 
+- name: Setting alert configuration
+  ansible.builtin.template:
+    src: alert.yml
+    dest: /tmp/alert.yml
+
 - name: Importing Grafana Dashboard
   community.grafana.grafana_dashboard:
     grafana_url: http://172.31.15.172:3000

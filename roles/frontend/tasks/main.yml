@@ -22,6 +22,11 @@
     nexus_user: "{{ lookup('aws_ssm', 'nexus.user', region='us-east-1' ) }}"
     nexus_pass: "{{ lookup('aws_ssm', 'nexus.pass', region='us-east-1' ) }}"
 
+- name: Copying nginx config file to location
+  ansible.builtin.template:
+    src: nginx.conf
+    dest: /etc/nginx/nginx.conf
+
 - name: Copying config file to location
   ansible.builtin.template:
     src: roboshop.conf

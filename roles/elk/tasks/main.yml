@@ -1,0 +1,3 @@
+- name: Adding Logstash configuration file
+  ansible.builtin.include_tasks: logstash.yml
+  when: logstash is defined

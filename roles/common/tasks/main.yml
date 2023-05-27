@@ -28,4 +28,3 @@
     state: present
     overwrite: yes
     path: /tmp/grafana.json
-

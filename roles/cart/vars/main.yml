@@ -2,5 +2,3 @@ component: cart
 schema_load: false
 version: 1.0.3
 service_name: cart
-
-

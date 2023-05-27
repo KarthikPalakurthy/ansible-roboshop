@@ -6,7 +6,7 @@
 
 - name: Import ELK
   ansible.builtin.import_role:
-    name: common
+    name: elk
 
 - name: Setting alert configuration
   ansible.builtin.template:
@@ -24,7 +24,6 @@
     src: grafana-dashboard.json
     dest: /tmp/grafana.json
     remote_src: yes
-
 
 - name: Importing Grafana Dashboard
   community.grafana.grafana_dashboard:

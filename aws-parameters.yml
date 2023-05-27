@@ -51,7 +51,7 @@
           - { name: "smtp.user", value: "AKIAXQI3N565ILMWECUU" }
           - { name: "smtp.pass", value: "BLcyDhqOhayCtMjqu4ftC7+yriL5urDhOcPe85n7InX+" }
           - { name: "dev.ssh.user", value: "centos" }
-          - { name: "dev.ssh.user", value: "DevOps321" }
+          - { name: "dev.ssh.pass", value: "DevOps321" }
 
 
 

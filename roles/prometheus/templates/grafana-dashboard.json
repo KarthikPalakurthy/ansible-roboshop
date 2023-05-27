@@ -174,7 +174,7 @@
             "type": "prometheus",
             "uid": "Gk5lLvw4k"
           },
-          "expr": "100-avg by (name)(floor(rate(node_cpu_seconds_total{mode=\"idle\", name=\"{{env}}}}-{{component}}\"}[1m]) * 100))",
+          "expr": "100-avg by (name)(floor(rate(node_cpu_seconds_total{mode=\"idle\", name=\"{{env}}-{{component}}\"}[1m]) * 100))",
           "refId": "A"
         }
       ],
@@ -267,8 +267,8 @@
     "list": []
   },
   "time": {
-    "from": "2023-05-24T19:43:13.293Z",
-    "to": "2023-05-24T19:52:04.441Z"
+    "from": "now-30m",
+    "to": "now"
   },
   "timepicker": {},
   "timezone": "",

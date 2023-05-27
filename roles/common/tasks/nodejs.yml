@@ -10,9 +10,9 @@
   ansible.builtin.include_tasks: app-prereq.yml
 
 - name: Installing NPM
-  npm:
-    name: catalogue
+  community.general.npm:
     path: /app
+    state: latest
 
 - name : Downloading DOcDB content
   ansible.builtin.get_url:

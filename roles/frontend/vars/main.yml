@@ -3,3 +3,4 @@ schema_load: false
 version: 1.0.0
 service_name: nginx
 filebeat_required: true
+log_path: /var/log/nginx/access.log

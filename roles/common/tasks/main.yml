@@ -4,11 +4,9 @@
 - name: Installing Prometheus exporter
   ansible.builtin.shell: sudo labauto prometheus-node-exporter
 
-- name: Copying template file
-  ansible.builtin.template:
-    src: grafana-dashboard.json
-    dest: /tmp/grafana.json
-    remote_src: yes
+- name: Import ELK
+  ansible.builtin.import_role:
+    name: common
 
 - name: Setting alert configuration
   ansible.builtin.template:
@@ -20,6 +18,13 @@
 
 - name: Restart Prometheus
   ansible.builtin.shell: curl -v -s -XPOST http://172.31.15.172:9090/-/reload
+
+- name: Copying template file
+  ansible.builtin.template:
+    src: grafana-dashboard.json
+    dest: /tmp/grafana.json
+    remote_src: yes
+
 
 - name: Importing Grafana Dashboard
   community.grafana.grafana_dashboard:

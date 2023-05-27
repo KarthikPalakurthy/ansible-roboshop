@@ -1,3 +1,7 @@
 - name: Adding Logstash configuration file
   ansible.builtin.include_tasks: logstash.yml
   when: logstash is defined
+
+- name: Adding Filebeat configuration file
+  ansible.builtin.include_tasks: filebeat.yml
+  when: filebeat_required

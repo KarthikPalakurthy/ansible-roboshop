@@ -2,3 +2,4 @@ component: frontend
 schema_load: false
 version: 1.0.0
 service_name: nginx
+filebeat_required: true

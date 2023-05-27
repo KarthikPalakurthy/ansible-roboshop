@@ -8,7 +8,7 @@
 - name: Load MySQL
   community.mysql.mysql_db:
     state: import
-    name: mysql
+    name: all
     target: /app/schema/{{component}}.sql
     login_host: "{{ lookup('aws_ssm', '{{env}}.rds.ENDPOINT', region='us-east-1')}}"
     login_user: "{{ lookup('aws_ssm', '{{env}}.rds.DB_ADMIN_USER', region='us-east-1')}}"

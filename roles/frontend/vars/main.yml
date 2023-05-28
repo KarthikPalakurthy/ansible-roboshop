@@ -6,4 +6,4 @@ filebeat_required: true
 log_path: /var/log/nginx/access.log
 exclude_lines: true
 exclude_words: ["ratings"]
-monitor_ssh_service: true
+#monitor_ssh_service: true

@@ -1,2 +1,3 @@
 schema_type: null
 filebeat_required: false
+monitor_ssh_service: false

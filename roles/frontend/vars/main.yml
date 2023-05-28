@@ -5,5 +5,5 @@ service_name: nginx
 filebeat_required: true
 log_path: /var/log/nginx/access.log
 exclude_lines: true
-exclude_words: ["ratings"]
+#exclude_words: ["ratings"]
 monitor_ssh_service: true

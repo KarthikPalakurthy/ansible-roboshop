@@ -5,7 +5,7 @@
 
 - name: Installing Java
   ansible.builtin.yum:
-    name: java-ll-openjdk
+    name: java-17-openjdk
     state: installed
 
 - name: App Pre-requisites

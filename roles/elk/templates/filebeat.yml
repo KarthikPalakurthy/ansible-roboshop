@@ -38,7 +38,7 @@ filebeat.inputs:
     # before parsers, use include_message parser.
 
   {% if exclude_lines %}
-    exclude_lines: {{ exclude_words }}
+    exclude_lines: {{exclude_words}}
   {% endif %}
 
     # Include lines. A list of regular expressions to match. It exports the lines that are

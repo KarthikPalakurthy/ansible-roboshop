@@ -4,6 +4,6 @@ version: 1.0.0
 service_name: nginx
 filebeat_required: true
 log_path: /var/log/nginx/access.log
-exclude_lines: true
-exclude_words: ["/api/ratings"]
+#exclude_lines: true
+#exclude_words: ["/api/ratings"]
 #monitor_ssh_service: true

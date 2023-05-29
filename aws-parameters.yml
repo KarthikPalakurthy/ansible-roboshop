@@ -29,6 +29,28 @@
         - {name: "dev.user.MONGO", value: "true" }
         - {name: "dev.user.MONGO_URL", value: "mongodb://mongodb-dev.devpractice.online:27017/users" }
         - {name: "dev.user.REDIS_HOST", value: "redis-dev.devpractice.online" }
+#Prod parameters
+        - { name: "prod.cart.REDIS_HOST", value: "redis-prod.devpractice.online" }
+        - { name: "prod.cart.CATALOGUE_HOST", value: "catalogue-prod.devpractice.online" }
+        - { name: "prod.catalogue.MONGO", value: "true" }
+        - { name: "prod.catalogue.MONGO_URL", value: "mongodb://mongodb-prod.devpractice.online:27017/catalogue" }
+        - { name: "prod.catalogue.MONGO_URL", value: "mongodb://mongodb-prod.devpractice.online:27017/catalogue" }
+        - { name: "prod.frontend.CATALOGUE_URL", value: "http://catalogue-prod.devpractice.online:80/" }
+        - { name: "prod.frontend.CART_URL", value: "http://cart-prod.devpractice.online:80/" }
+        - { name: "prod.frontend.USER_URL", value: "http://user-prod.devpractice.online:80/" }
+        - { name: "prod.frontend.PAYMENT_URL", value: "http://payment-prod.devpractice.online:80/" }
+        - { name: "prod.frontend.SHIPPING_URL", value: "http://shipping-prod.devpractice.online:80/" }
+        - { name: "prod.payment.CART_HOST", value: "cart-prod.devpractice.online" }
+        - { name: "prod.payment.USER_HOST", value: "user-prod.devpractice.online" }
+        - { name: "prod.payment.CART_PORT", value: "80" }
+        - { name: "prod.payment.USER_PORT", value: "80" }
+        - { name: "prod.payment.AMQP_HOST", value: "rabbitmq-prod.devpractice.online" }
+        - { name: "prod.payment.AMQP_USER", value: "roboshop" }
+        - { name: "prod.shipping.CART_ENDPOINT", value: "cart-prod.devpractice.online:80" }
+        - { name: "prod.shipping.DB_HOST", value: "mysql-prod.devpractice.online" }
+        - { name: "prod.user.MONGO", value: "true" }
+        - { name: "prod.user.MONGO_URL", value: "mongodb://mongodb-prod.devpractice.online:27017/users" }
+        - { name: "prod.user.REDIS_HOST", value: "redis-prod.devpractice.online" }
 ### Passwords should not be in the files however, we are creating for lab purposes
 
     - name: Create a value pair in AWS Parameter store
@@ -52,6 +74,20 @@
           - { name: "smtp.pass", value: "BLcyDhqOhayCtMjqu4ftC7+yriL5urDhOcPe85n7InX+" }
           - { name: "dev.ssh.user", value: "centos" }
           - { name: "dev.ssh.pass", value: "DevOps321" }
-
+#prod
+          - {name: "prod.payment.AMQP_PASS" , value: "roboshop123" }
+          - {name: "prod.mysql.DB_ADMIN_USER", value: "root" }
+          - { name: "prod.mysql.DB_ADMIN_PASS", value: "Roboshop@1" }
+          - { name: "prod.docdb.DB_ADMIN_USER", value: "admin1" }
+          - { name: "prod.docdb.DB_ADMIN_PASS", value: "Roboshop123" }
+          - { name: "prod.rds.DB_ADMIN_USER", value: "admin1" }
+          - { name: "prod.rds.DB_ADMIN_PASS", value: "Roboshop123" }
+          - { name: "prod.rabbitmq.AMQP_USER", value: "roboshop" }
+          - { name: "prod.rabbitmq.AMQP_PASS", value: "roboshop123" }
+          - { name: "grafana_api_key", value: "eyJrIjoiWVNuSmhGaTB3MWxwbEFxYjM0djNyTWJLSUhuZmcyUXoiLCJuIjoidGVtcCIsImlkIjoxfQ==" }
+          - { name: "smtp.user", value: "AKIAXQI3N565ILMWECUU" }
+          - { name: "smtp.pass", value: "BLcyDhqOhayCtMjqu4ftC7+yriL5urDhOcPe85n7InX+" }
+          - { name: "prod.ssh.user", value: "centos" }
+          - { name: "prod.ssh.pass", value: "DevOps321" }
 
 

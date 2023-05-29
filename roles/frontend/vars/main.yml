@@ -5,4 +5,4 @@ service_name: nginx
 filebeat_required: true
 log_path: /var/log/nginx/access.log
 exclude_lines: true
-exclude_words: ['/api/user']
+exclude_words: ['/api/user','/api/ratings']

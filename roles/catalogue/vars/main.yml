@@ -1,5 +1,5 @@
-component: catalogue
+component: catalogue.yml
 schema_load: true
 schema_type: mongodb
 version: 1.0.3
-service_name: catalogue
+service_name: catalogue.yml

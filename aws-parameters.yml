@@ -74,6 +74,8 @@
           - { name: "smtp.pass", value: "BLcyDhqOhayCtMjqu4ftC7+yriL5urDhOcPe85n7InX+" }
           - { name: "dev.ssh.user", value: "centos" }
           - { name: "dev.ssh.pass", value: "DevOps321" }
+          - { name: "dev.rabbirmq.USER", value: "roboshop" }
+          - { name: "dev.rabbitmq.PASS", value: "roboshop12345" }
 #prod
           - {name: "prod.payment.AMQP_PASS" , value: "roboshop123" }
           - {name: "prod.mysql.DB_ADMIN_USER", value: "root" }
